@@ -1,12 +1,8 @@
 const {pClock} = require("PigeonClock");
 let colors = require("./colors.json");
 
-function hexUse(dir) {
-    try {
-        colors = require(dir);
-    } catch (err) {
-        console.error(err);
-    }
+function hexUse(colors_to_use) {
+    colors = colors_to_use;
 }
 
 function hexNow(time = new Date()) {
