@@ -1,0 +1,43 @@
+[
+    {
+        "color": "#4A148C",
+        "start" : 1.8
+    },
+    {
+        "color": "#1E88E5",
+        "start" : 1.9
+    },
+    {
+        "color": "#4DD0E1",
+        "start" : 0.0
+    },
+    {
+        "color": "#4CAF50",
+        "start" : 0.1
+    },
+    {
+        "color": "#FFFFFF",
+        "start" : 0.2,
+        "end" : 0.75
+    },
+    {
+        "color": "#4CAF50",
+        "start" : 0.75
+    },
+    {
+        "color": "#F57F17",
+        "start" : 0.85
+    },
+    {
+        "color": "#52852F",
+        "start" : 0.95
+    },
+    {
+        "color": "#FF0000",
+        "start" : 1.0
+    },
+    {
+        "color": "#000000",
+        "start" : 1.2
+    }
+]

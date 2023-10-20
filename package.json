@@ -1,0 +1,28 @@
+{
+  "name": "sunposrgb",
+  "version": "1.0.0",
+  "description": "Takes a sun position angle and gives an RGB value",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frogbean/SunPosRGB.git"
+  },
+  "keywords": [
+    "Sun",
+    "position",
+    "RGB",
+    "lights"
+  ],
+  "author": "frogbean",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frogbean/SunPosRGB/issues"
+  },
+  "homepage": "https://github.com/frogbean/SunPosRGB#readme",
+  "dependencies": {
+    "pigeonclock": "github:frogbean/PigeonClock"
+  }
+}
