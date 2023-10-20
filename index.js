@@ -1,5 +1,13 @@
 const {pClock} = require("PigeonClock");
-const colors = require("./colors.json");
+let colors = require("./colors.json");
+
+function hexUse(dir) {
+    try {
+        colors = require(dir);
+    } catch (err) {
+        console.error(err);
+    }
+}
 
 function hexNow(time = new Date()) {
     const pclk = pClock(time);
@@ -62,4 +70,4 @@ function hex_gradient(startHex, endHex, startPos, endPos, currentPos) {
     return hexCode;
 }
 
-module.exports = { hexNow }
+module.exports = { hexNow, hexUse }
