@@ -29,6 +29,13 @@ function hexNow(time = new Date()) {
             }
         }
     }
+    if(globalThis?.debug) {
+        console.log("start", start);
+        console.log("next", next);
+        console.log("startPos", startPos);
+        console.log("nextPos", nextPos);
+        console.log("pclk", pclk);
+    }
     return hex_gradient(start, next, startPos, nextPos, pclk);
 }
 
