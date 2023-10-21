@@ -43,7 +43,7 @@ function hexNow(time = new Date()) {
 
 function hex_gradient(startHex, endHex, startPos, endPos, currentPos) {
 
-    if(!startHex || !endHex || !startPos || !endPos || !currentPos) return '#0000E1'
+    if(startHex==undefined || endHex==undefined || startPos==undefined || endPos==undefined || currentPos==undefined) return '#0000E1'
 
     if(startPos === endPos) return startHex;
     // Convert hexadecimal color strings to integers
