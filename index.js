@@ -12,7 +12,7 @@ function hexNow(time = new Date()) {
     let start, next;
     let startPos, nextPos;
     for(const color of colors) {
-
+        if(globalThis?.debug) console.log(color);
         if(start) {
             next = color.color;
             nextPos = color.start;
