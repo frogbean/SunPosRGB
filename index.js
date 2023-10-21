@@ -51,9 +51,13 @@ function hex_gradient(startHex, endHex, startPos, endPos, currentPos) {
     endHex = endHex.replace('#', '');
 
     if(endPos <= startPos) {
+        if(globalThis?.debug) console.log("Adjusting positions...");
         endPos += 2;
-        if(currentPos <= startPos)
-        currentPos += 2;
+        if(globalThis?.debug) console.log("endPos:", endPos);
+        if(currentPos <= startPos) {
+            currentPos += 2;
+            if(globalThis?.debug) console.log("currentPos:", currentPos);
+        }
     }
 
     const startColor = {
