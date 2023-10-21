@@ -19,7 +19,7 @@ function hexNow(time = new Date()) {
             break;
         }
 
-        if(pclk >= color.start) {
+        if(pclk >= color.start || pclk >= color?.end) {
             start = color.color;
             startPos = color.start;
             if(color.end) {
