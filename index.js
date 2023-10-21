@@ -11,21 +11,23 @@ function hexNow(time = new Date()) {
 
     let start, next;
     let startPos, nextPos;
+    let assignNext = false;
     for(const color of colors) {
         if(globalThis?.debug) console.log(color);
-        if(start) {
+
+        if(assignNext) {
+            assignNext = false;
             next = color.color;
             nextPos = color.start;
-            break;
         }
 
         if(pclk >= color.start || pclk >= color?.end) {
+            assignNext = true;
             start = color.color;
             startPos = color.start;
             if(color.end) {
                 next = color.color;
                 nextPos = color.end;
-                break;
             }
         }
     }
