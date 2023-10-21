@@ -33,6 +33,11 @@ function hexNow(time = new Date()) {
         }
     }
 
+    if(assignNext) {
+        next = colors[0].color;
+        nextPos = colors[0].start;
+    }
+
     if(globalThis?.debug) {
         console.log("start", start);
         console.log("next", next);
