@@ -3,7 +3,7 @@ const {pClock} = require("PigeonClock");
 let colors;
 
 function hexUse(colors_to_use) {    
-    colors = colors_to_use.sort((a,b)=>a.start>b.start);
+    colors = colors_to_use.sort((a,b)=>a.start-b.start);
 }
 
 function hexNow(time = new Date()) {
