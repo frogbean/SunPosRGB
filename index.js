@@ -1,5 +1,6 @@
 const {pClock} = require("PigeonClock");
-let colors = require("./colors.json");
+
+let colors;
 
 function hexUse(colors_to_use) {
     colors = colors_to_use;
@@ -8,14 +9,14 @@ function hexUse(colors_to_use) {
 function hexNow(time = new Date()) {
     const pclk = pClock(time);
 
-    let start, next, getNext = false;
+    let start, next;
     let startPos, nextPos;
     for(const color of colors) {
 
-        if(getNext) {
-            getNext = false;
+        if(start) {
             next = color.color;
             nextPos = color.start;
+            break;
         }
 
         if(pclk >= color.start) {
@@ -24,11 +25,11 @@ function hexNow(time = new Date()) {
             if(color.end) {
                 next = color.color;
                 nextPos = color.end;
-            } else {
-                getNext = true;
+                break;
             }
         }
     }
+
     if(globalThis?.debug) {
         console.log("start", start);
         console.log("next", next);
@@ -36,10 +37,13 @@ function hexNow(time = new Date()) {
         console.log("nextPos", nextPos);
         console.log("pclk", pclk);
     }
+
     return hex_gradient(start, next, startPos, nextPos, pclk);
 }
 
 function hex_gradient(startHex, endHex, startPos, endPos, currentPos) {
+
+    if(!startHex || !endHex || !startPos || !endPos || !currentPos) return '#0000E1'
 
     if(startPos === endPos) return startHex;
     // Convert hexadecimal color strings to integers
