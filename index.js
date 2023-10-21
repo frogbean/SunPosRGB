@@ -66,4 +66,4 @@ function hex_gradient(startHex, endHex, startPos, endPos, currentPos) {
     return hexCode;
 }
 
-module.exports = { hexNow, hexUse }
+module.exports = { hexNow, hexUse, pClock }
