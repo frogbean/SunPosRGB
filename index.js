@@ -29,6 +29,7 @@ function hexNow(time = new Date()) {
             start = color.color;
             startPos = color.start;
             if(color.end) {
+                assignNext = false;
                 if(globalThis?.debug) console.log("end", color.color);
                 next = color.color;
                 nextPos = color.end;
