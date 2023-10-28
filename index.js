@@ -17,16 +17,19 @@ function hexNow(time = new Date()) {
         if(globalThis?.debug) console.log(color);
 
         if(assignNext) {
+            if(globalThis?.debug) console.log("assignNext", color.color);
             assignNext = false;
             next = color.color;
             nextPos = color.start;
         }
 
         if(pclk >= color.start || pclk >= color?.end) {
+            if(globalThis?.debug) console.log("assign", color.color);
             assignNext = true;
             start = color.color;
             startPos = color.start;
             if(color.end) {
+                if(globalThis?.debug) console.log("end", color.color);
                 next = color.color;
                 nextPos = color.end;
             }
