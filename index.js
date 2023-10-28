@@ -7,7 +7,7 @@ function hexUse(colors_to_use) {
 }
 
 function hexNow(time = new Date()) {
-    const pclk = globalThis?.debug ? (globalThis?.plcktest ?? 1.95) : pClock(time);
+    const pclk = pClock(time);
 
 
     let start, next;
